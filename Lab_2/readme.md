@@ -1,176 +1,46 @@
-## Laboratorium 2 - Rozwiązania
+# # Laboratorium 2 - Readme
 
-**Autor:** Kacper Masiewicz  
-**Numer albumu:** 72640  
+## Wstęp do Programowania - mgr inż. Anna Marczakiewicz
 
----
+### Tematyka:
+* Instrukcja warunkowa `if`, `elif`, `else`
+* Praca z plikami
 
-## Opis Projektu
+### Opis:
 
-Projekt zawiera rozwiązania zadań z laboratorium nr 2, realizowanego w ramach kursu *Wstęp do Programowania*. Skrypt `lab2_solutions.py` demonstruje zastosowanie instrukcji warunkowych, operacji na plikach oraz manipulacji tekstowych w Pythonie. Każde zadanie posiada szczegółowy opis i przewidywane wyniki. Do wykonania zadań 5a i 5b niezbędny jest plik `notowania_gieldowe.txt`.
+Ten projekt zawiera rozwiązania zadań z Laboratorium 2 z przedmiotu "Wstęp do Programowania". Skrypt ten demonstruje zastosowanie instrukcji warunkowych oraz operacji na plikach w języku Python. 
 
----
+### Zadania:
 
-## Pliki Projektu
+1. **Ocena z egzaminu:** Program pobiera od użytkownika liczbę punktów i wyświetla informację o wyniku egzaminu:
+    * **> 80 punktów:** Egzamin zaliczony w terminie 0.
+    * **50-80 punktów:** Możliwość poprawy.
+    * **< 50 punktów:** Konieczność poprawy.
 
-- **`lab2_solutions.py`** - Główny skrypt zawierający rozwiązania zadań.
-- **`notowania_gieldowe.txt`** - Plik tekstowy z przykładowymi danymi giełdowymi do zadań 5a i 5b.
-- **`README.md`** - Dokumentacja projektu z instrukcjami oraz opisem zadań.
+2. **Sortowanie trzech liczb:** Program sortuje trzy liczby wprowadzone przez użytkownika od najmniejszej do największej, bez użycia wbudowanych funkcji sortujących.
 
----
+3. **Sprawdzanie rozszerzenia pliku:** Program sprawdza, czy zmienna `Nazwa_pliku` zawiera nazwę pliku z rozszerzeniem ".xlsx" i wyświetla odpowiedni komunikat.
 
-## Utworzenie Pliku `notowania_gieldowe.txt`
+4. **Obliczanie wyniku drużyny piłkarskiej:** Program oblicza całkowity wynik drużyny piłkarskiej na podstawie liczby zdobytych bramek (`gol`) i ewentualnych punktów bonusowych (`bonus`):
+    * **a)** Punkty bonusowe są przyznawane oddzielnie za przekroczenie 5 i 10 bramek.
+    * **b)** Punkty bonusowe za przekroczenie 5 i 10 bramek sumują się.
 
-Plik `notowania_gieldowe.txt` jest używany w zadaniach 5a i 5b do odczytywania oraz dopisywania danych giełdowych. Każda linia zawiera nazwę spółki i jej wartość, oddzielone przecinkiem. Możesz utworzyć plik o następującej zawartości:
+5. **Operacje na plikach:**
+    * **a)** Program odczytuje plik `notwania_gieldowe.txt` i wyświetla jego zawartość.
+    * **b)** Program dopisuje nową linię do pliku `notwania_gieldowe.txt` i ponownie wyświetla jego zawartość.
 
-```
-ABC, 123
-XYZ, 456
-PQR, 789
-KLM, 321
-MNO, 654
-```
+6. **Sprawdzanie wielkości liter:** Program sprawdza, czy litera wprowadzona przez użytkownika jest duża czy mała.
 
-Alternatywnie, możesz wywołać funkcję `create_notowania_file()` w skrypcie `lab2_solutions.py`, aby automatycznie wygenerować plik z przykładową zawartością.
+7. **Walidacja hasła:** Program sprawdza, czy zmienna `Hasło` spełnia następujące warunki:
+    * Długość 11 znaków.
+    * Zawiera znak specjalny '!'.
 
----
+8. **Wycinanie znaków z ciągu:** Program wykorzystuje operator wycinania `[:]` do wyodrębnienia:
+    * Pierwszych trzech znaków z ciągu `text`.
+    * Ostatnich dwóch znaków z ciągu `text`.
 
-## Opis Zadań i Przykłady Wyników
+9. **Zamiana wielkości liter:** Program zmienia wszystkie duże litery na małe i na odwrót w podanym ciągu znaków, wykorzystując metodę `swapcase()`.
 
-### Zadanie 1
+### Uruchomienie:
 
-**Opis**: Program sprawdza wynik egzaminu na podstawie liczby zdobytych punktów.
-
-- **Warunki**: 
-  - Powyżej 80 punktów – zaliczenie w terminie 0.
-  - Od 50 do 80 punktów – możliwość poprawy.
-  - Poniżej 50 punktów – konieczność poprawy.
-- **Przykład**:
-  ```python
-  zadanie_1(85)  # Wynik: "Zaliczenie w terminie 0"
-  ```
-
-### Zadanie 2
-
-**Opis**: Program sortuje trzy liczby w kolejności od najmniejszej do największej, bez użycia funkcji wbudowanych.
-
-- **Przykład**:
-  ```python
-  zadanie_2(3, 1, 2)  # Wynik: (1, 2, 3)
-  ```
-
-### Zadanie 3
-
-**Opis**: Program sprawdza, czy podana nazwa pliku kończy się na `.xlsx`.
-
-- **Przykład**:
-  ```python
-  zadanie_3("Raport_maj.xlsx")  # Wynik: "Tak"
-  ```
-
-### Zadanie 4
-
-**Opis**: Oblicza wynik drużyny piłkarskiej na podstawie liczby goli i bonusów.
-
-- **Zasady**:
-  - Każda bramka to 10 punktów.
-  - Powyżej 5 goli – dodatkowe 5 punktów bonusowych.
-  - Powyżej 10 goli – dodatkowe 10 punktów bonusowych (łącznie 15).
-- **Przykład**:
-  ```python
-  zadanie_4(6, 10)  # Wynik: 75
-  ```
-
-### Zadanie 5a
-
-**Opis**: Odczytuje i wypisuje zawartość pliku `notowania_gieldowe.txt`.
-
-- **Przykład Wywołania**:
-  ```plaintext
-  zadanie_5a()  
-  # Wynik:
-  # ABC, 123
-  # XYZ, 456
-  # PQR, 789
-  # KLM, 321
-  # MNO, 654
-  ```
-
-### Zadanie 5b
-
-**Opis**: Dodaje nową linię do pliku `notowania_gieldowe.txt` i wypisuje jego zawartość.
-
-- **Przykład Wywołania**:
-  ```plaintext
-  zadanie_5b()  
-  # Wynik:
-  # ABC, 123
-  # XYZ, 456
-  # PQR, 789
-  # KLM, 321
-  # MNO, 654
-  # ALR, 113
-  ```
-
-### Zadanie 6
-
-**Opis**: Sprawdza, czy wprowadzona litera jest duża czy mała.
-
-- **Przykład**:
-  ```python
-  zadanie_6('A')  # Wynik: "Duża litera"
-  ```
-
-### Zadanie 7
-
-**Opis**: Waliduje hasło pod kątem długości oraz obecności znaku specjalnego `!`.
-
-- **Przykład**:
-  ```python
-  zadanie_7('pk47!jy0893')  # Wynik: "Hasło jest poprawne"
-  ```
-
-### Zadanie 8
-
-**Opis**: Wyodrębnia z ciągu pierwsze trzy i ostatnie dwa znaki.
-
-- **Przykład**:
-  ```python
-  zadanie_8('Studiuje-Informatykę')  # Wynik: ('Stu', 'ę')
-  ```
-
-### Zadanie 9
-
-**Opis**: Zamienia duże litery na małe i odwrotnie.
-
-- **Przykład**:
-  ```python
-  zadanie_9('Studiuje-Informatykę')  # Wynik: 'sTUDIJE-iNFORMATYKĘ'
-  ```
-
-## Uruchamianie Zadań
-
-1. Skopiuj wszystkie pliki do jednego katalogu.
-2. Upewnij się, że plik `notowania_gieldowe.txt` znajduje się w katalogu głównym.
-3. Uruchom funkcje, importując `lab2_solutions.py` w terminalu lub interpreterze Python.
-
-**Przykładowe Wywołanie**
-
-```python
-from lab2_solutions import zadanie_1, zadanie_2, zadanie_3, zadanie_4, zadanie_5a, zadanie_5b, zadanie_6, zadanie_7, zadanie_8, zadanie_9
-
-print(zadanie_1(85))
-print(zadanie_2(3, 1, 2))
-print(zadanie_3("Raport_maj.xlsx"))
-print(zadanie_4(6, 10))
-zadanie_5a()
-zadanie_5b()
-print(zadanie_6('A'))
-print(zadanie_7('pk47!jy0893'))
-print(zadanie_8('Studiuje-Informatykę'))
-print(zadanie_9('Studiuje-Informatykę'))
-```
-
-## Informacje dodatkowe
-
-Ten projekt ma na celu praktykę programowania z użyciem instrukcji warunkowych, operacji na plikach oraz operacji tekstowych w Pythonie. Każde zadanie jest samodzielnym ćwiczeniem, które można uruchomić i testować oddzielnie.
+Aby uruchomić skrypt, należy zapisać go w pliku `.py` i uruchomić z poziomu konsoli lub interpretera Pythona.
