@@ -1,4 +1,3 @@
-# Zawartość pliku notowania_gieldowe.txt
 ABC, 123
 XYZ, 456
 PQR, 789
