@@ -1,7 +1,3 @@
-Oto bardziej rozbudowany README.md, który zawiera wszystkie potrzebne informacje o projekcie, szczegółowy opis zadań, instrukcje uruchamiania oraz wyjaśnienie wyników.
-
-README.md
-
 # Laboratorium 2 - Rozwiązania
 
 **Autor:** Kacper Masiewicz  
